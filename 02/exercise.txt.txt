@@ -1,0 +1,30 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Users\85773> cd Desktop
+PS C:\Users\85773\Desktop> mkdir MH8811_02
+
+
+    Directory: C:\Users\85773\Desktop
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----        9/25/2019   7:41 PM                MH8811_02
+
+
+PS C:\Users\85773\Desktop> cd MH8811_02
+PS C:\Users\85773\Desktop\MH8811_02> New-Item 'my file'
+
+
+    Directory: C:\Users\85773\Desktop\MH8811_02
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----        9/25/2019   7:41 PM              0 my file
+
+
+PS C:\Users\85773\Desktop\MH8811_02> cd..
+PS C:\Users\85773\Desktop> rm -Recurse -Force MH8811_02
+PS C:\Users\85773\Desktop>
