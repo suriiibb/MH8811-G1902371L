@@ -1,15 +1,44 @@
 
-def drawBoard():
-    board = ""
-    for i in range (dim+2):
-        if i%2 == 0:
-            board += "     |" * (dim-1)
-        else :
-            board += "- - - " * dim
-        board += "\n"
-    print(board) 
 
 
-if __name__ == "__main__":
-    dim = 3
-    drawBoard()
+def temp(i):
+    if i == 0:
+        return "o"
+    elif i == 1:
+        return "X"
+    elif i == 2:
+        return " "
+
+        
+
+
+def drawBoard(board):
+    
+    size = len(board)
+    result = ''
+    counter1 = 0
+    
+    for i in board:
+        counter1 += 1
+        counter = 0
+        for j in i:
+            if counter < size -1:
+                result += " " + temp(j) + " |"
+                counter+=1
+
+            else:
+                result += " "+ temp(j)
+                counter += 1
+                result +="\n"
+                if counter1 < size:
+
+                    result += "--- " * size
+        result +="\n"
+    return result
+
+
+board = [[0,1,2],[2,0,0],[1,1,2]]
+print (drawBoard(board))
+
+
+
